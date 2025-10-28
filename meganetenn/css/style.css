@@ -1,0 +1,573 @@
+html{    
+    font-size:16px;
+    color: #525252;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e8dfd9;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+/* すべてのページに適応-ヘッダー */
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    width: 100%;                    
+    font-size: 1.5rem;
+    top:0;
+    z-index: 10;
+    background-color: #e8dfd9;
+}
+
+.header .logo {
+    width: 120px;
+    height: auto;
+}
+.nav a {
+    position: relative;
+    display: block;
+    color: #3a291c;
+    text-decoration: none;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* 中心を起点にする */
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #3a291c;
+  transition: width 0.3s ease;
+  transform: translateX(-50%); 
+}
+
+.nav a:hover::after {
+  width: 100%; 
+}
+
+.nav ul {
+    display: flex;
+    justify-content:right ;
+    list-style-type: none;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+}
+
+/* すべてのページに適応-メイン */
+.top-bg{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}     
+.top-bg video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%)translateX(-50%);
+    object-fit: cover;
+    z-index: -1;
+} 
+main{
+    margin: 0px auto 50px auto;
+    max-width: 100%;
+}
+
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+.recommend{
+    padding-top: 1rem;
+    background-color: #3a291c;
+    text-align: center;
+    color: #e8dfd9;
+}
+
+.recommend h3 {
+    margin-top: 20px;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.item{
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.item img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto;
+}
+.button{
+    text-align: center;
+}
+.more {
+    display: inline-block;
+    background-color: #3a291c;
+    text-align: center;
+    color: #e8dfd9;
+    padding: 20px 35px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.more a {
+    color: #e8dfd9;
+    text-decoration: none;
+}
+.more:hover {
+  background-color:#525252
+}
+
+
+/* すべてのページに適応-フッター */
+footer{
+background-color:#3a291c;
+text-align: center;
+padding: 2rem 1rem;
+font-size: 14px;
+color:#e8dfd9;
+}
+.footer-top{
+    margin-bottom:2rem ;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.footer-bottom a{
+    color: #e8dfd9;
+    text-decoration: none;
+}
+.footer-address{
+    text-align: right;
+}
+
+/* 個別のページに対応 */
+/* HOME */
+.recommendh2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/megane1-2.jpg);
+    width: 100vw;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.recommendh2 h2 {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+.storyh2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/G.jpg);
+    width: 100%;
+    min-height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+}
+.storyh2 h2 {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+.info{
+    border: 1px solid  #525252;
+    padding: 50px 20px;
+    margin: 30px 20px;
+}
+
+
+/* EYEWEARS */
+.eyewearsh1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/megane1-2.jpg);
+    width: 100%;
+    min-height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.eyewearsh1 h1 {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+.eyewearstop {
+  display: grid;   
+  grid-template-columns: 1fr 1fr; 
+  width: 100%;
+  min-height: 60vh;
+  margin: 0;
+  padding: 0;   
+}
+
+.eyewear img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eyewearstext {
+    width: 100%;
+    height: 100%;
+  background-color: #3a291c;
+  color: #e8dfd9;
+  padding: 60px 80px;
+  justify-content: center;
+}
+
+.eyewearstext h2 {
+  position: relative;
+  padding-left: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.eyewearstext h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 2em;
+  background-color: #e8dfd9;
+  opacity: 0.8;
+}
+
+.eyewearall{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr; 
+height: 60vh;
+width: 100%;
+}
+
+.eyewearitem{
+    display:flex;
+    flex-direction:column; 
+    justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.eyewearitem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    flex-grow: 1;
+    display: block;
+}
+
+.eyewearitem h2 {
+    margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.eyewearitem p {
+    color: #e8dfd9;
+}
+
+.eyewearitem a {
+  text-decoration: none;
+  color: #e8dfd9;
+  transition: text-shadow 0.3s ease;
+}
+
+.eyewearitem a:hover h2,
+.eyewearitem a:hover p {
+  text-shadow: 0 0 15px rgba(255, 240, 220, 0.8);
+}
+
+.eyewearstext a{
+    text-decoration: none;
+    color: #e8dfd9;
+}
+
+
+.herlinetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/top8.jpg);
+    width: 100%;
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+.herlinetitle h2, .herlinetitle p {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+.herlinetitle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.herlineitems {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.herlineitem {
+    display: grid;
+    flex-direction: column;
+}
+.herlineitem p {
+    margin-top: 10px;
+}
+.herlineitem img {
+    max-height: 300px;
+    width: auto;
+}
+
+
+.hisformtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/top5.jpg);
+    width: 100%;
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.hisformtitle h2, .hisformtitle p {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+.hisformtitle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hisformitems {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hisformitem {
+    display: grid;
+    flex-direction: column;
+}
+
+.hisformitem p {
+    margin-top: 10px;
+}
+
+.hisformitem img {
+    max-height: 300px;
+    width: auto;
+}
+
+.rawframetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/top4.jpg);
+    width: 100%;
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.rawframetitle h2, .rawframetitle p {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+.rawframetitle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.rawframeitems {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.rawframeitem {
+    display: grid;
+    flex-direction: column;
+}
+
+.rawframeitem p {
+    margin-top: 10px;
+}
+.rawframeitem img {
+    max-height: 300px;
+    width: auto;
+}
+
+/* contact */
+.contact h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/C.jpg);
+    width: 100%;
+    min-height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.contact h1 {
+    color: #e8dfd9;
+    text-shadow: 2px 2px 3px #3a291c;
+}
+
+form {
+    margin: 50px auto;
+    max-width: 640px;
+}
+input[type="text"], textarea{
+    padding: 6px;
+    width: 100%;
+    font-size: 1rem;
+      border: 1px solid #3a291c; 
+  border-radius: 4px; 
+  background-color: #e8dfd9; 
+  color: #3a291c; 
+}
+
+textarea {
+    height: 140px;
+    
+}
+
+.submit {
+    text-align: center;
+}
+
+input[type="submit"] {
+    border: none;
+    padding: 20px;
+    width: 200px;
+    background-color: #3a291c;
+    color: #e8dfd9;
+    font-size: 1rem;
+}
+
+select {
+  width: 260px;
+  padding: 6px;
+  font-size: 1rem;
+  border: 1px solid #3a291c; 
+  border-radius: 4px; 
+  background-color: #e8dfd9; 
+  color: #3a291c; 
+  appearance: auto; 
+  -webkit-appearance: auto; 
+  -moz-appearance: auto; 
+}
+
+/* モバイル対応 */
+@media(max-width:767px) {
+ .nav ul{
+    flex-wrap: wrap;
+    gap:20px;
+ }   
+ 
+
+ .items{
+    grid-template-columns: 1fr;
+    gap: 0px;
+}
+.item{
+    margin: 25px auto;
+}
+
+/* EYEWEARS */
+.eyewearstop {
+    display: flex;
+    flex-direction: column;
+}
+.eyewear img {
+width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.eyewearstext {
+    width: 100%;
+    height: auto;
+  background-color: #3a291c;
+  color: #e8dfd9;
+  padding: 40px 20px;
+  justify-content: center;
+  margin: 0;
+}
+
+.eyewearall {
+    grid-template-columns: 1fr;
+    height: auto;
+}
+.eyewearitem {
+    height: 55vh;
+}
+}
