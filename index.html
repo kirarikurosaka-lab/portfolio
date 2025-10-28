@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ポートフォリオサイトです。">
+    <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <a href="index.html"><p>Portfolio</p></a>
+
+        <div class="mobile-round">
+            <ul>
+                <li><a href="work.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- ヘッダーここまで -->
+    <div class="hero">
+        <div class="video-bg">
+            <video autoplay muted loop playsinline>
+                <source src="images/aurora_bg.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    
+
+        <div class="hero-contents">
+            <div class="hero-text">
+                <h1 class="fadein"><div class="kirari">KUROSAKA KIRARI</div><br>Portfolio</h1>
+            </div>
+            <nav class="round">
+                <ul>
+                    <li><a href="work.html"class="fadein">WORKS</a></li>
+                    <li><a href="about.html"class="fadein">ABOUT</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </div>
+<div class="scroll">
+            <span>Scroll</span>
+        </div>
+
+    <!-- メイン -->
+    <main>
+    
+    <h2>WORKS</h2>
+    <div class="works-grid">
+        <div class="work-item">
+            <a href="cafe/index.html" class="web-link" target="_blank"><img src="images/kuzirasamune.png" alt="kuziracafeのサムネイル"><div class="overlay">View Site</div></a>       
+        </div>
+
+        <div class="work-item">
+            <a href="images/hokuhoku.png" class="pdf-preview">
+                <img src="images/hokuhoku.png" alt="PDF作品サムネイル"><div class="overlay">View Image</div></a>       
+        </div>
+
+        <div class="work-item">
+            <a href="images/linestamp.png" class="pdf-preview">
+                <img src="images/linestamp.png" alt="LINEスタンプサムネイル"><div class="overlay">View Image</div></a>       
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modal-img" src="" alt="">
+    </div>
+
+    <a href="work.html" class="more">VIEW MORE<span class="arrow"></span></a>
+
+    <h2>SKILLS / TOOLS</h2>
+    <div class="top-skill">
+        <h3>Design</h3>
+        <p>Illustrator / Photoshop / Premiere Pro / After Effects</p>
+        
+        <h3>Coding</h3>
+        <p>HTML / CSS</p>
+    </div>
+
+    
+    <h2>PROFILE</h2>
+    <div class="top-profile">
+        <div class="top-profile-title">
+        <h3>NAME : </h3><p>　黑阪　輝里</p>
+        </div>
+        <p>情報をわかりやすく伝えるデザインの魅力に惹かれ、より多くの人に伝わる表現を追求したいという思いからWEBデザインを学び始めました。</p>
+    </div>   
+
+    
+    <a href="about.html" class="more">VIEW MORE<span class="arrow"></span></a>
+    </main>
+ <!-- メイン　ここまで -->
+
+ <!-- フッター -->
+    <footer>
+        <div class="gotop">
+            <a href="#top" class="fadein">
+                <span class="star">✦</span>
+                <span class="text">TOP</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="work.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+        <p>&copy; KUROSAKA KIRARI</p>
+    </footer>
+<!-- フッターここまで -->
+</body>
+<script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const pdfLinks = document.querySelectorAll(".pdf-preview");
+
+pdfLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    modalImg.src = link.getAttribute("href");
+    modal.style.display = "flex";
+  });
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+  modal.style.display = "none";
+});
+</script>
+</html>
