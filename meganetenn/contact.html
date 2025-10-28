@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="group4">
+    <link rel="icon"href="images/meganefavicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>神戸北野眼鏡店</title>
+</head>
+<body>
+     <header class="header">
+        <div class="logo">
+        <a href="index.html"><img src="images/meganerogo2.png"></a>
+        </div>
+         <nav class="nav">
+             <ul>
+                <li><a href="index.html">HOME</a></li>                    
+                <li><a href="eyewears.html">EYEWEARS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+             </ul>
+            </nav>
+    </header>
+            
+    <main>
+    <div class="contact">
+    <h1>お問い合わせ</h1>
+    </div>
+
+     <form action="result.html" >
+        <p>
+            <label for="kind">お問い合わせの種類</label><br>
+            <select name="kind" id="kind">
+             <option value="1">ご予約</option>
+             <option value="2">商品に関するお問い合わせ</option>  
+             <option value="3">店舗に関するお問い合わせ</option>    
+             <option value="4">その他</option> 
+            </select>
+        </p>
+        <p>
+            <label for="subject">お問い合わせの件名</label><br>
+            <input type="text" name="subject"placeholder="タイトル"id="subject">
+        </p> 
+       <p>
+        <label for="messege">お問い合わせ内容</label><br>
+            <textarea name="messege" cols="45" rows="15" placeholder="お問い合わせ内容を記入してください" id="messege"></textarea>
+       </p> 
+       <p class="submit"> 
+        <input type="submit" value="送信">
+        </p>     
+     </form>     
+        
+        
+    </main>
+
+    <footer>
+     <div class="footer-top">
+        <p>&copy; 神戸北野眼鏡店</p>
+    </div>
+    <div class="footer-bottom">
+        <nav class="nav">
+             <ul>
+                <li><a href="item.html">HOME</a></li>                    
+                <li><a href="eyewears.html">EYEWEARS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+             </ul>
+        </nav>
+        <address class="footer-address">
+            兵庫県神戸市中央区北野町0-0-0<br>
+            TEL:000-000-0000
+        </addres>
+    </div>    
+    </footer>
+</body>
+</html>
